@@ -382,10 +382,10 @@ export function App() {
         try {
           const remaining = await decrementTrialCredit(currentUser.uid);
           if (remaining <= 0) {
-            addToast('warning', '⚠️ Bạn đã dùng hết 5 lượt dùng thử! Hãy liên hệ Nhân Phúc (0988.250.112) để kích hoạt bản quyền Pro không giới hạn.');
+            addToast('warning', '⚠️ Bạn đã dùng hết 5 lượt dùng thử! Hãy liên hệ NGUYỄN BỈNH KHÔI (0909 461 641) để kích hoạt bản quyền Pro không giới hạn.');
             setIsLicenseStatusOpen(true);
           } else {
-            addToast('info', `🎁 Bạn còn ${remaining}/5 lượt tạo đề dùng thử. (Liên hệ Nhân Phúc - 0988.250.112 để nâng cấp Pro)`);
+            addToast('info', `🎁 Bạn còn ${remaining}/5 lượt tạo đề dùng thử. (Liên hệ NGUYỄN BỈNH KHÔI - 0909 461 641 để nâng cấp Pro)`);
           }
         } catch (creditErr) {
           console.warn('Lỗi trừ lượt dùng thử:', creditErr);
@@ -547,7 +547,7 @@ export function App() {
                 Lần đầu đăng nhập sẽ được cấp <strong className="text-indigo-600 font-bold">5 lượt dùng thử miễn phí</strong>
               </p>
               <p className="text-[11px] text-slate-500">
-                Hỗ trợ & duyệt kích hoạt Pro: <a href="https://zalo.me/0988250112" target="_blank" rel="noopener noreferrer" className="text-indigo-700 font-bold hover:underline">Nhân Phúc - 0988.250.112</a> (Zalo/Hotline)
+                Hỗ trợ & duyệt kích hoạt Pro: <a href="https://zalo.me/0909461641" target="_blank" rel="noopener noreferrer" className="text-indigo-700 font-bold hover:underline">NGUYỄN BỈNH KHÔI - 0909 461 641</a> (Zalo/Hotline)
               </p>
             </div>
           </div>
@@ -699,7 +699,7 @@ export function App() {
         <span>© 2025 Tạo Bài Tập Tương Tự · Dành cho giáo viên</span>
         <span className="hidden sm:inline text-slate-300">|</span>
         <span>
-          Hỗ trợ & Đăng ký bản quyền Pro: <a href="https://zalo.me/0988250112" target="_blank" rel="noopener noreferrer" className="font-bold text-indigo-700 hover:underline">Nhân Phúc - 0988.250.112</a> (Zalo/Hotline)
+          Hỗ trợ & Đăng ký bản quyền Pro: <a href="https://zalo.me/0909461641" target="_blank" rel="noopener noreferrer" className="font-bold text-indigo-700 hover:underline">NGUYỄN BỈNH KHÔI - 0909 461 641</a> (Zalo/Hotline)
         </span>
       </footer>
 

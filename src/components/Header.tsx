@@ -192,7 +192,7 @@ export const Header: React.FC<HeaderProps> = ({
                         ? 'bg-rose-100 hover:bg-rose-200 text-rose-800 border-rose-300 animate-pulse'
                         : 'bg-amber-100 hover:bg-amber-200 text-amber-800 border-amber-300'
                     }`}
-                    title="Nhấn để xem thông tin bản quyền và liên hệ Nhân Phúc (0988250112)"
+                    title="Nhấn để xem thông tin bản quyền và liên hệ NGUYỄN BỈNH KHÔI (0909 461 641)"
                   >
                     <Clock className="w-3 h-3 text-amber-600" />
                     <span>
@@ -284,14 +284,14 @@ export const Header: React.FC<HeaderProps> = ({
                           onOpenLicenseStatus();
                         }}
                         className="mt-1 w-full px-2.5 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold rounded-lg flex items-center justify-between text-[11px] transition-colors cursor-pointer border border-indigo-200"
-                        title="Xem chi tiết các gói bản quyền & liên hệ Nhân Phúc (0988250112)"
+                        title="Xem chi tiết các gói bản quyền & liên hệ NGUYỄN BỈNH KHÔI (0909 461 641)"
                       >
                         <span className="flex items-center space-x-1.5">
                           <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
                           <span>Nâng cấp Pro / Liên hệ</span>
                         </span>
                         <span className="text-[10px] bg-indigo-600 text-white font-bold px-1.5 py-0.5 rounded">
-                          0988.250.112
+                          0909 461 641
                         </span>
                       </button>
                     )}

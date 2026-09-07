@@ -29,7 +29,7 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
   const isBlocked = userProfile?.tier === 'blocked';
 
   const handleCopyPhone = () => {
-    navigator.clipboard.writeText('0988250112');
+    navigator.clipboard.writeText('0909461641');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -76,26 +76,26 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
             {isBlocked && (
               <p>
                 Tài khoản của bạn tạm thời chưa được kích hoạt hoặc đã bị khóa bởi Quản trị viên.
-                Vui lòng liên hệ Quản trị viên <b>Nhân Phúc (0988.250.112)</b> để được mở khóa nhanh chóng.
+                Vui lòng liên hệ Quản trị viên <b>NGUYỄN BỈNH KHÔI (0909 461 641)</b> để được mở khóa nhanh chóng.
               </p>
             )}
             {isExpired && (
               <p>
-                Thời hạn bản quyền Pro của bạn đã hết. Hãy liên hệ <b>Nhân Phúc (0988.250.112)</b> để được gia hạn tiếp tục
+                Thời hạn bản quyền Pro của bạn đã hết. Hãy liên hệ <b>NGUYỄN BỈNH KHÔI (0909 461 641)</b> để được gia hạn tiếp tục
                 sử dụng không giới hạn tính năng tạo đề và xuất file Word MathType OLE.
               </p>
             )}
             {isTrialExhausted && (
               <p>
                 Bạn đã sử dụng hết <b>5/5 lượt tạo & tải đề thi dùng thử miễn phí</b>. Để tiếp tục tạo và tải đề không giới hạn,
-                vẽ hình TikZ và GeoViz tự động, xuất Word MathType OLE chuẩn đẹp, xin vui lòng liên hệ <b>Nhân Phúc (0988.250.112)</b> để kích hoạt bản quyền Pro!
+                vẽ hình TikZ và GeoViz tự động, xuất Word MathType OLE chuẩn đẹp, xin vui lòng liên hệ <b>NGUYỄN BỈNH KHÔI (0909 461 641)</b> để kích hoạt bản quyền Pro!
               </p>
             )}
             {!isBlocked && !isExpired && !isTrialExhausted && (
               <p>
                 {userProfile?.tier === 'trial' ? (
                   <>
-                    Bạn đang sử dụng gói dùng thử (còn <b>{userProfile.trialRemaining || 0}/5 lượt</b>). Quý thầy cô có thể liên hệ <b>Nhân Phúc</b> để nâng cấp lên bản quyền Pro không giới hạn ngay hôm nay!
+                    Bạn đang sử dụng gói dùng thử (còn <b>{userProfile.trialRemaining || 0}/5 lượt</b>). Quý thầy cô có thể liên hệ <b>NGUYỄN BỈNH KHÔI</b> để nâng cấp lên bản quyền Pro không giới hạn ngay hôm nay!
                   </>
                 ) : (
                   <>
@@ -125,7 +125,7 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
             </div>
           </div>
 
-          {/* Thông tin liên hệ Quản trị viên - Nhân Phúc - 0988250112 */}
+          {/* Thông tin liên hệ Quản trị viên - NGUYỄN BỈNH KHÔI - 0909 461 641 */}
           <div className="p-4 bg-gradient-to-br from-indigo-50/90 via-purple-50/80 to-blue-50/90 border-2 border-indigo-200 rounded-2xl space-y-3 shadow-2xs">
             <div className="flex items-center justify-between">
               <span className="font-bold text-xs text-indigo-950 uppercase tracking-wide flex items-center gap-1.5">
@@ -141,9 +141,9 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
               <div className="space-y-0.5">
                 <div className="text-[11px] text-slate-500 font-medium">Người phụ trách hỗ trợ & kích hoạt:</div>
                 <div className="text-base font-black text-slate-900 flex items-center gap-2 flex-wrap">
-                  <span className="text-indigo-950">Nhân Phúc</span>
+                  <span className="text-indigo-950">NGUYỄN BỈNH KHÔI</span>
                   <span className="text-xs font-mono font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-200">
-                    0988.250.112
+                    0909 461 641
                   </span>
                 </div>
               </div>
@@ -151,11 +151,11 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
               <div className="flex items-center gap-2 flex-wrap">
                 {/* Nút Chat Zalo */}
                 <a
-                  href="https://zalo.me/0988250112"
+                  href="https://zalo.me/0909461641"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all shadow-xs hover:shadow cursor-pointer"
-                  title="Mở Zalo nhắn tin trực tiếp với Nhân Phúc (0988250112)"
+                  title="Mở Zalo nhắn tin trực tiếp với NGUYỄN BỈNH KHÔI (0909 461 641)"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
                   <span>Chat Zalo</span>
@@ -164,9 +164,9 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
 
                 {/* Nút Gọi Hotline */}
                 <a
-                  href="tel:0988250112"
+                  href="tel:0909461641"
                   className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition-all shadow-xs hover:shadow cursor-pointer"
-                  title="Gọi trực tiếp tới số 0988250112"
+                  title="Gọi trực tiếp tới số 0909 461 641"
                 >
                   <PhoneCall className="w-3.5 h-3.5" />
                   <span>Gọi ngay</span>
@@ -177,7 +177,7 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
                   type="button"
                   onClick={handleCopyPhone}
                   className="inline-flex items-center space-x-1 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition-all border border-slate-200 cursor-pointer"
-                  title="Sao chép số điện thoại 0988250112"
+                  title="Sao chép số điện thoại 0909 461 641"
                 >
                   {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{copied ? 'Đã chép' : 'Chép số'}</span>
@@ -186,7 +186,7 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
             </div>
 
             <p className="text-[11px] text-slate-600 italic leading-normal">
-              💡 <b>Cách nhanh nhất:</b> Quý thầy cô chỉ cần nhắn Zalo hoặc gọi số <b>0988.250.112 (Nhân Phúc)</b> để được duyệt kích hoạt dùng bản quyền Pro không giới hạn ngay lập tức!
+              💡 <b>Cách nhanh nhất:</b> Quý thầy cô chỉ cần nhắn Zalo hoặc gọi số <b>0909 461 641 (NGUYỄN BỈNH KHÔI)</b> để được duyệt kích hoạt dùng bản quyền Pro không giới hạn ngay lập tức!
             </p>
           </div>
         </div>
@@ -194,7 +194,7 @@ export const LicenseStatusModal: React.FC<LicenseStatusModalProps> = ({
         {/* Footer */}
         <div className="px-6 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <span className="text-[11px] text-slate-500">
-            Hotline / Zalo: <b>0988.250.112</b> (Nhân Phúc)
+            Hotline / Zalo: <b>0909 461 641</b> (NGUYỄN BỈNH KHÔI)
           </span>
           <button
             onClick={onClose}
