@@ -656,10 +656,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 type="button"
                 onClick={() => setShowTikzAiModal(true)}
                 className="px-2 py-0.5 text-[10px] text-purple-600 hover:text-purple-800 bg-purple-50 hover:bg-purple-100 border border-purple-200 rounded font-medium transition-colors cursor-pointer flex items-center space-x-1"
-                title="Dùng AI sinh lại mã TikZ từ đề bài"
+                title="✨ Dùng AI sinh mã TikZ từ đề bài — phù hợp cho MỌI loại hình: hình trụ, hình cầu, hình nón, hình hộp, đồ thị hàm số, biểu đồ, hình không gian 3D..."
               >
                 <Sparkles className="w-3 h-3" />
-                <span>Sinh TikZ AI</span>
+                <span>Sinh TikZ AI (3D)</span>
               </button>
 
               {/* Nút Vẽ GeoViz — hình phẳng 2D chính xác */}
@@ -668,10 +668,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                 onClick={handleGeovizDraw}
                 disabled={isGeneratingGeoviz}
                 className="px-2 py-0.5 text-[10px] text-teal-700 hover:text-teal-900 bg-teal-50 hover:bg-teal-100 border border-teal-300 rounded font-medium transition-colors cursor-pointer flex items-center space-x-1 disabled:opacity-50 disabled:cursor-not-allowed"
-                title="Vẽ hình phẳng 2D chính xác bằng động cơ GeoViz (AI trích xuất ràng buộc → giải tọa độ → sinh TikZ chuẩn)"
+                title="📐 Vẽ hình phẳng 2D chính xác (tam giác, đường tròn, tiếp tuyến, đường cao...) — ⚠️ KHÔNG dùng cho hình 3D (hình trụ, hình cầu, hình nón...). Với hình 3D hãy dùng nút Sinh TikZ AI."
               >
                 {isGeneratingGeoviz ? <Loader2 className="w-3 h-3 animate-spin" /> : <span>📐</span>}
-                <span>{isGeneratingGeoviz ? 'Đang vẽ GeoViz...' : 'Vẽ GeoViz'}</span>
+                <span>{isGeneratingGeoviz ? 'Đang vẽ GeoViz...' : 'Vẽ GeoViz (2D)'}</span>
               </button>
 
               {/* Nút Sao chép TikZ */}
@@ -774,10 +774,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
                     onClick={handleGeovizDraw}
                     disabled={isGeneratingGeoviz}
                     className="inline-flex items-center space-x-1 px-3 py-1 text-xs bg-teal-600 hover:bg-teal-700 text-white rounded-md transition-colors cursor-pointer shadow-2xs disabled:opacity-50"
-                    title="Vẽ lại hình học 2D chính xác bằng GeoViz Engine"
+                    title="📐 Vẽ hình phẳng 2D chính xác (tam giác, đường tròn, tiếp tuyến, đường cao...) — ⚠️ KHÔNG dùng cho hình 3D (hình trụ, hình cầu, hình nón...). Với hình 3D hãy dùng nút Sinh TikZ AI."
                   >
                     {isGeneratingGeoviz ? <Loader2 className="w-3 h-3 animate-spin" /> : <span>📐</span>}
-                    <span>{isGeneratingGeoviz ? 'Đang vẽ...' : '📐 Vẽ GeoViz'}</span>
+                    <span>{isGeneratingGeoviz ? 'Đang vẽ...' : '📐 Vẽ GeoViz (2D)'}</span>
                   </button>
                 </div>
               </div>
@@ -816,20 +816,20 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             type="button"
             onClick={() => setShowTikzAiModal(true)}
             className="inline-flex items-center space-x-1 px-2.5 py-1 text-[11px] text-purple-600 hover:text-purple-800 bg-purple-50 hover:bg-purple-100 border border-purple-200 rounded-md transition-colors cursor-pointer"
-            title="Dùng AI sinh mã TikZ cho câu hỏi này"
+            title="✨ Dùng AI sinh mã TikZ từ đề bài — phù hợp cho MỌI loại hình: hình trụ, hình cầu, hình nón, hình hộp, đồ thị hàm số, biểu đồ, hình không gian 3D..."
           >
             <Sparkles className="w-3 h-3" />
-            <span>Sinh TikZ AI</span>
+            <span>Sinh TikZ AI (3D)</span>
           </button>
           <button
             type="button"
             onClick={handleGeovizDraw}
             disabled={isGeneratingGeoviz}
             className="inline-flex items-center space-x-1 px-2.5 py-1 text-[11px] text-teal-700 hover:text-teal-900 bg-teal-50 hover:bg-teal-100 border border-teal-300 rounded-md transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-            title="Vẽ hình học phẳng 2D chính xác bằng GeoViz Engine (tốt cho đường tròn, tam giác, tiếp tuyến...)"
+            title="📐 Vẽ hình phẳng 2D chính xác (tam giác, đường tròn, tiếp tuyến, đường cao...) — ⚠️ KHÔNG dùng cho hình 3D (hình trụ, hình cầu, hình nón...). Với hình 3D hãy dùng nút Sinh TikZ AI."
           >
             {isGeneratingGeoviz ? <Loader2 className="w-3 h-3 animate-spin" /> : <span>📐</span>}
-            <span>{isGeneratingGeoviz ? 'Đang vẽ GeoViz...' : '📐 Vẽ GeoViz'}</span>
+            <span>{isGeneratingGeoviz ? 'Đang vẽ GeoViz...' : '📐 Vẽ GeoViz (2D)'}</span>
           </button>
         </div>
       )}
