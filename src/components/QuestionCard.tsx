@@ -171,7 +171,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
     setGeovizStatusMsg('📐 Đang phân tích bài toán hình học và giải tọa độ chính xác...');
     try {
       // Ghép toàn bộ nội dung, câu lệnh và các phương án để AI có đầy đủ dữ kiện hình học
-      const fullQuestionPrompt = [
+      // Bọc bằng dấu phân cách rõ ràng để AI KHÔNG đọc nhầm sang câu hỏi khác
+      const questionBody = [
         question.noiDung,
         question.cauLenh,
         question.menhDeA ? `a) ${question.menhDeA}` : '',
@@ -183,6 +184,11 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         question.optionC ? `C. ${question.optionC}` : '',
         question.optionD ? `D. ${question.optionD}` : '',
       ].filter(Boolean).join('\n');
+
+      const fullQuestionPrompt =
+        `=== ĐỀ BÀI DUY NHẤT CẦN VẼ HÌNH (CHỈ PHÂN TÍCH ĐOẠN NÀY, KHÔNG BỊA THÊM) ===\n` +
+        questionBody +
+        `\n=== KẾT THÚC ĐỀ BÀI ===`;
 
       const result = await generateGeovizTikzFromQuestion(fullQuestionPrompt);
       const newTikz = result.tikzCode;

@@ -207,9 +207,61 @@ export const GuideModal: React.FC<GuideModalProps> = ({ isOpen, onClose }) => {
             </div>
           </section>
 
+          <section>
+            <h3 className="text-sm sm:text-base font-bold text-slate-900 mb-3">D. Lưu ý quan trọng khi vẽ hình TikZ &amp; GeoViz</h3>
+
+            {/* Bảng chọn đúng công cụ */}
+            <div className="overflow-x-auto rounded-xl border border-slate-200 mb-4">
+              <table className="w-full min-w-[650px] border-collapse">
+                <thead className="bg-slate-50 text-left text-[11px] uppercase tracking-wide text-slate-500">
+                  <tr>
+                    <th className="p-3 w-44">Loại bài toán</th>
+                    <th className="p-3 w-44">Nút nên dùng</th>
+                    <th className="p-3">Ví dụ</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-xs sm:text-sm">
+                  <tr className="align-top hover:bg-slate-50/70">
+                    <td className="p-3 font-semibold text-slate-800">Hình phẳng 2D<br /><span className="font-normal text-emerald-700">(khuyên dùng GeoViz)</span></td>
+                    <td className="p-3"><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-semibold">📐 Vẽ GeoViz</span></td>
+                    <td className="p-3 text-slate-600 leading-relaxed">Tam giác, đường tròn, tiếp tuyến, đường cao, trung tuyến, phân giác, tứ giác phẳng…</td>
+                  </tr>
+                  <tr className="align-top hover:bg-slate-50/70 bg-amber-50/40">
+                    <td className="p-3 font-semibold text-slate-800">Hình không gian 3D<br /><span className="font-normal text-red-600">(GeoViz vẽ SAI)</span></td>
+                    <td className="p-3"><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 font-semibold">✨ Sinh TikZ AI</span></td>
+                    <td className="p-3 text-slate-600 leading-relaxed">Hình trụ, hình cầu, hình nón, hình hộp, khối chóp, hình tứ diện…</td>
+                  </tr>
+                  <tr className="align-top hover:bg-slate-50/70">
+                    <td className="p-3 font-semibold text-slate-800">Đồ thị hàm số, biểu đồ</td>
+                    <td className="p-3"><span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-800 font-semibold">✨ Sinh TikZ AI</span></td>
+                    <td className="p-3 text-slate-600 leading-relaxed">Đồ thị parabol, hàm số bậc 3, bảng biến thiên, trục tọa độ…</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Cảnh báo nổi bật */}
+            <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 flex items-start gap-3">
+              <span className="text-2xl shrink-0">⚠️</span>
+              <div className="space-y-1.5 text-amber-950 leading-relaxed">
+                <p className="font-bold">GeoViz Engine chỉ vẽ được hình phẳng 2D!</p>
+                <p>
+                  Nếu dùng <b>📐 Vẽ GeoViz</b> cho bài toán hình không gian (hình trụ, hình cầu, hình nón…), ứng dụng sẽ vẽ ra <b>hình sai hoặc hình không liên quan</b> vì GeoViz không hiểu khái niệm 3D.
+                </p>
+                <p>
+                  Trong trường hợp đó, hãy dùng <b>✨ Sinh TikZ AI</b> — nút này cho phép AI tự viết mã TikZ phù hợp với mọi loại hình, bao gồm cả hình không gian.
+                </p>
+                <p className="text-[11px] text-amber-800">
+                  Mẹo nhận biết: nếu đề bài có từ khóa "hình trụ, hình cầu, hình nón, khối chóp, hình hộp, thể tích, diện tích xung quanh…" → dùng <b>Sinh TikZ AI</b>.
+                </p>
+              </div>
+            </div>
+          </section>
+
           <section className="pt-1 text-[11px] text-slate-500 leading-relaxed">
             Tham khảo cập nhật từ Google: <a className="text-indigo-600 hover:underline" href="https://ai.google.dev/gemini-api/docs/get-started" target="_blank" rel="noopener noreferrer">Getting started</a> và <a className="text-indigo-600 hover:underline" href="https://ai.google.dev/gemini-api/docs/api-key" target="_blank" rel="noopener noreferrer">Using Gemini API keys</a>.
           </section>
+
         </div>
 
         <div className="px-5 sm:px-7 py-3 bg-slate-50 border-t border-slate-100 flex justify-end">

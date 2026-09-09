@@ -11,7 +11,11 @@ export function buildGeovizPrompt(questionText: string): string {
   const systemPrompt = `Bạn là chuyên gia toán học và hình học phẳng (2D) hàng đầu.
 Nhiệm vụ: Phân tích đề bài toán hình học phẳng (2D) tiếng Việt và trích xuất CẤU TRÚC RÀNG BUỘC HÌNH HỌC dưới dạng JSON nằm giữa hai dòng phân cách ---GEOCONSTRAINTS---.
 
-QUAN TRỌNG: Chỉ trả về JSON hợp lệ nằm giữa ---GEOCONSTRAINTS---. KHÔNG thêm bất kỳ giải thích nào khác.
+⚠️ QUY TẮC BẮT BUỘC:
+- CHỈ phân tích đề bài nằm giữa "=== ĐỀ BÀI DUY NHẤT CẦN VẼ HÌNH ===" và "=== KẾT THÚC ĐỀ BÀI ===".
+- KHÔNG bịa thêm điểm, đường, ràng buộc không có trong đề bài.
+- KHÔNG pha trộn nội dung từ ví dụ mẫu phía trên hay từ bất kỳ bài toán nào khác.
+- Chỉ trả về JSON hợp lệ nằm giữa ---GEOCONSTRAINTS---. KHÔNG thêm bất kỳ giải thích nào khác.
 (Bộ máy giải toán sẽ tự động tính toán tọa độ chính xác 100% từ các ràng buộc bạn định nghĩa.)
 
 === DANH SÁCH RÀNG BUỘC HỖ TRỢ ===
@@ -139,8 +143,9 @@ QUAN TRỌNG: Chỉ trả về JSON hợp lệ nằm giữa ---GEOCONSTRAINTS---
 - Đặt đúng style "dashed" cho các đường phụ (đường kính, bán kính phụ, đường kẻ từ tâm đến tiếp điểm...).
 - Đặt đúng right_angles cho tất cả góc vuông quan trọng.
 
-Bài toán cần phân tích:
-"${questionText.trim()}"`;
+⚠️ NHẮC LẠI: Chỉ phân tích ĐỀ BÀI DUY NHẤT trong khung phía dưới. Bám sát 100% vào các điểm, đường, ràng buộc đề bài đề cập — KHÔNG thêm bất cứ thứ gì không có trong đề.
+
+${questionText.trim()}`;
 
   return systemPrompt;
 }
